@@ -21,6 +21,13 @@
           >
             图片平铺
           </router-link>
+          <router-link
+            to="/timeline"
+            class="nav-link"
+            :class="{ active: $route.name === 'Timeline' }"
+          >
+            时间线
+          </router-link>
         </div>
       </div>
     </nav>

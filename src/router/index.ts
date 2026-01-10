@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue'
 import GridPage from '../components/GridPage.vue'
+import TimelinePage from '../components/TimelinePage.vue'
 
 // 路由配置
 const routes = [
@@ -18,6 +19,14 @@ const routes = [
     component: GridPage,
     meta: {
       title: '电子相册 - 图片平铺'
+    }
+  },
+  {
+    path: '/timeline',
+    name: 'Timeline',
+    component: TimelinePage,
+    meta: {
+      title: '电子相册 - 时间线'
     }
   }
 ]
