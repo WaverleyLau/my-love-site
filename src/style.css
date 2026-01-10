@@ -3,9 +3,29 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* 主题CSS变量（默认深色主题） */
+  --color-background: #1a1a1a;
+  --color-backgroundSecondary: #242424;
+  --color-backgroundTertiary: #3a3a3a;
+  --color-backgroundCard: #2a2a2a;
+  --color-backgroundNavbar: #0f0f0f;
+  
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #cccccc;
+  --color-textDescription: #aaa;
+  --color-textLight: #666;
+  
+  --color-accentPrimary: #4a9eff;
+  --color-accentSecondary: #64b5f6;
+  --color-accentLight: rgba(74, 158, 255, 0.1);
+  
+  --color-borderColor: #3a3a3a;
+  --color-shadowColor: rgba(0, 0, 0, 0.3);
+  --color-modalOverlay: rgba(0, 0, 0, 0.9);
+  
+  --color-timelineLine: #3a3a3a;
+  --color-timelineDot: #4a9eff;
+  --color-buttonHover: rgba(255, 255, 255, 0.1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,9 +41,12 @@
 
 body {
   min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-textPrimary);
 }
 
 #app {
   width: 100%;
   min-height: 100vh;
+  background-color: var(--color-background);
 }

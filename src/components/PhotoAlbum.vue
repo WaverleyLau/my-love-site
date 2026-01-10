@@ -139,14 +139,14 @@ const closePhoto = () => {
 
 // 上一张图片
 const prevPhoto = () => {
-  if (selectedIndex.value! > 0) {
+  if (selectedIndex.value !== null && selectedIndex.value > 0) {
     selectedIndex.value--
   }
 }
 
 // 下一张图片
 const nextPhoto = () => {
-  if (selectedIndex.value! < photos.length - 1) {
+  if (selectedIndex.value !== null && selectedIndex.value < photos.length - 1) {
     selectedIndex.value++
   }
 }

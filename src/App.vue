@@ -29,6 +29,11 @@
             时间线
           </router-link>
         </div>
+        
+        <!-- 主题切换器 -->
+        <div class="theme-container">
+          <ThemeSwitcher />
+        </div>
       </div>
     </nav>
 
@@ -41,6 +46,7 @@
 
 <script setup lang="ts">
 // App.vue 现在作为布局容器，路由视图会根据当前路由显示对应的组件
+import ThemeSwitcher from './components/ThemeSwitcher.vue'
 </script>
 
 <style scoped>
@@ -49,13 +55,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #1a1a1a;
+  background-color: var(--color-background);
 }
 
 /* 导航栏样式 */
 .navbar {
-  background-color: #0f0f0f;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-backgroundNavbar);
+  box-shadow: 0 2px 8px var(--color-shadowColor);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -72,7 +78,7 @@
 }
 
 .navbar-brand {
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
@@ -87,7 +93,7 @@
 }
 
 .nav-link {
-  color: #aaa;
+  color: var(--color-textDescription);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -97,11 +103,11 @@
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--color-textPrimary);
 }
 
 .nav-link.active {
-  color: #4a9eff;
+  color: var(--color-accentPrimary);
 }
 
 .nav-link.active::after {
@@ -111,8 +117,14 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #4a9eff;
+  background-color: var(--color-accentPrimary);
   border-radius: 2px;
+}
+
+/* 主题切换器容器 */
+.theme-container {
+  display: flex;
+  align-items: center;
 }
 
 /* 主内容区域 */

@@ -165,14 +165,14 @@ const closePhoto = () => {
 
 // 上一张图片
 const prevPhoto = () => {
-  if (selectedIndex.value! > 0) {
+  if (selectedIndex.value !== null && selectedIndex.value > 0) {
     selectedIndex.value--
   }
 }
 
 // 下一张图片
 const nextPhoto = () => {
-  if (selectedIndex.value! < photos.length - 1) {
+  if (selectedIndex.value !== null && selectedIndex.value < photos.length - 1) {
     selectedIndex.value++
   }
 }
@@ -183,7 +183,7 @@ const nextPhoto = () => {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #1a1a1a;
+  background-color: var(--color-background);
 }
 
 .page-header {
@@ -193,15 +193,15 @@ const nextPhoto = () => {
 }
 
 .page-header h1 {
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px var(--color-shadowColor);
 }
 
 .page-description {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1.1rem;
   margin: 0;
 }
@@ -220,15 +220,15 @@ const nextPhoto = () => {
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--color-shadowColor);
   transition: all 0.3s ease;
-  background-color: #2a2a2a;
+  background-color: var(--color-backgroundCard);
   aspect-ratio: 1;
 }
 
 .photo-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 24px var(--color-shadowColor);
 }
 
 .photo-wrapper {
@@ -280,7 +280,7 @@ const nextPhoto = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--color-modalOverlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,13 +289,13 @@ const nextPhoto = () => {
 }
 
 .modal-content {
-  background-color: #2a2a2a;
+  background-color: var(--color-backgroundCard);
   border-radius: 12px;
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px var(--color-shadowColor);
 }
 
 .close-btn {
@@ -305,7 +305,7 @@ const nextPhoto = () => {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #ffffff;
+  color: var(--color-textPrimary);
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -318,25 +318,25 @@ const nextPhoto = () => {
 }
 
 .close-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-buttonHover);
 }
 
 .modal-header {
   padding: 1.5rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--color-borderColor);
   text-align: center;
   position: relative;
 }
 
 .modal-header h2 {
   margin: 0 0 0.5rem 0;
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 1.5rem;
 }
 
 .modal-header p {
   margin: 0;
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1rem;
 }
 
@@ -367,9 +367,9 @@ const nextPhoto = () => {
 }
 
 .nav-btn {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #ffffff;
+  background-color: var(--color-buttonHover);
+  border: 1px solid var(--color-borderColor);
+  color: var(--color-textPrimary);
   font-size: 2rem;
   width: 50px;
   height: 50px;
@@ -384,7 +384,7 @@ const nextPhoto = () => {
 }
 
 .nav-btn:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-accentLight);
   transform: scale(1.1);
 }
 
@@ -395,12 +395,12 @@ const nextPhoto = () => {
 
 .modal-footer {
   padding: 1rem 1.5rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--color-borderColor);
   text-align: center;
 }
 
 .page-info {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1rem;
 }
 

@@ -229,14 +229,14 @@ const closePhoto = () => {
 
 // 上一张图片
 const prevPhoto = () => {
-  if (selectedIndex.value! > 0) {
+  if (selectedIndex.value !== null && selectedIndex.value > 0) {
     selectedIndex.value--
   }
 }
 
 // 下一张图片
 const nextPhoto = () => {
-  if (selectedIndex.value! < timelinePhotos.length - 1) {
+  if (selectedIndex.value !== null && selectedIndex.value < timelinePhotos.length - 1) {
     selectedIndex.value++
   }
 }
@@ -267,7 +267,7 @@ const getOffset = (year: string) => {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #1a1a1a;
+  background-color: var(--color-background);
 }
 
 .page-header {
@@ -277,15 +277,15 @@ const getOffset = (year: string) => {
 }
 
 .page-header h1 {
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px var(--color-shadowColor);
 }
 
 .page-description {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1.1rem;
   margin: 0;
 }
@@ -303,7 +303,7 @@ const getOffset = (year: string) => {
 }
 
 .year-header {
-  color: #4a9eff;
+  color: var(--color-accentPrimary);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -319,7 +319,7 @@ const getOffset = (year: string) => {
   transform: translateY(-50%);
   width: 4px;
   height: 100%;
-  background-color: #4a9eff;
+  background-color: var(--color-accentPrimary);
 }
 
 /* 时间线 */
@@ -335,7 +335,7 @@ const getOffset = (year: string) => {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #3a3a3a;
+  background-color: var(--color-timelineLine);
 }
 
 /* 时间线项 */
@@ -357,15 +357,15 @@ const getOffset = (year: string) => {
 }
 
 .timeline-content {
-  background-color: #2a2a2a;
+  background-color: var(--color-backgroundCard);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px var(--color-shadowColor);
   transition: box-shadow 0.3s ease;
 }
 
 .timeline-item:hover .timeline-content {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px var(--color-shadowColor);
 }
 
 /* 时间点 */
@@ -375,9 +375,9 @@ const getOffset = (year: string) => {
   top: 1.5rem;
   width: 14px;
   height: 14px;
-  background-color: #4a9eff;
+  background-color: var(--color-timelineDot);
   border-radius: 50%;
-  border: 3px solid #1a1a1a;
+  border: 3px solid var(--color-background);
   z-index: 1;
   transition: transform 0.3s ease;
 }
@@ -393,13 +393,13 @@ const getOffset = (year: string) => {
 
 /* 日期 */
 .timeline-date {
-  color: #4a9eff;
+  color: var(--color-accentPrimary);
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  background-color: rgba(74, 158, 255, 0.1);
+  background-color: var(--color-accentLight);
   border-radius: 12px;
 }
 
@@ -424,14 +424,14 @@ const getOffset = (year: string) => {
 
 /* 标题和描述 */
 .timeline-title {
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .timeline-description {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 0.9rem;
   margin: 0;
   line-height: 1.5;
@@ -444,7 +444,7 @@ const getOffset = (year: string) => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--color-modalOverlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,13 +453,13 @@ const getOffset = (year: string) => {
 }
 
 .modal-content {
-  background-color: #2a2a2a;
+  background-color: var(--color-backgroundCard);
   border-radius: 12px;
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px var(--color-shadowColor);
 }
 
 .close-btn {
@@ -469,7 +469,7 @@ const getOffset = (year: string) => {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #ffffff;
+  color: var(--color-textPrimary);
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -482,25 +482,25 @@ const getOffset = (year: string) => {
 }
 
 .close-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-buttonHover);
 }
 
 .modal-header {
   padding: 1.5rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--color-borderColor);
   text-align: center;
   position: relative;
 }
 
 .modal-header h2 {
   margin: 0 0 0.5rem 0;
-  color: #ffffff;
+  color: var(--color-textPrimary);
   font-size: 1.5rem;
 }
 
 .modal-header p {
   margin: 0;
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1rem;
 }
 
@@ -531,9 +531,9 @@ const getOffset = (year: string) => {
 }
 
 .nav-btn {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #ffffff;
+  background-color: var(--color-buttonHover);
+  border: 1px solid var(--color-borderColor);
+  color: var(--color-textPrimary);
   font-size: 2rem;
   width: 50px;
   height: 50px;
@@ -548,7 +548,7 @@ const getOffset = (year: string) => {
 }
 
 .nav-btn:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-accentLight);
   transform: scale(1.1);
 }
 
@@ -559,12 +559,12 @@ const getOffset = (year: string) => {
 
 .modal-footer {
   padding: 1rem 1.5rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--color-borderColor);
   text-align: center;
 }
 
 .page-info {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 1rem;
 }
 

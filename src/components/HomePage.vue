@@ -105,26 +105,26 @@ const photos: Photo[] = [
 .home-page {
   width: 100%;
   min-height: 100vh;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--color-background);
+  color: var(--color-textPrimary);
 }
 
 .header {
   text-align: center;
   padding: 3rem 2rem 2rem;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-backgroundSecondary) 100%);
 }
 
 .header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px var(--color-shadowColor);
 }
 
 .slogan {
   font-size: 1.2rem;
-  color: #aaa;
+  color: var(--color-textDescription);
   margin: 0;
 }
 
@@ -142,16 +142,16 @@ const photos: Photo[] = [
 .feature-item {
   text-align: center;
   padding: 2rem;
-  background-color: #2a2a2a;
+  background-color: var(--color-backgroundCard);
   border-radius: 12px;
   width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px var(--color-shadowColor);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px var(--color-shadowColor);
 }
 
 .feature-icon {
@@ -162,11 +162,11 @@ const photos: Photo[] = [
 .feature-item h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: var(--color-textPrimary);
 }
 
 .feature-item p {
-  color: #aaa;
+  color: var(--color-textDescription);
   font-size: 0.9rem;
   margin: 0;
 }
@@ -181,28 +181,28 @@ const photos: Photo[] = [
 .btn-primary {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #4a9eff;
-  color: #ffffff;
+  background-color: var(--color-accentPrimary);
+  color: var(--color-textPrimary);
   text-decoration: none;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+  box-shadow: 0 4px 12px var(--color-accentLight);
 }
 
 .btn-primary:hover {
-  background-color: #3a8eff;
+  background-color: var(--color-accentSecondary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(74, 158, 255, 0.4);
+  box-shadow: 0 6px 16px var(--color-accentLight);
 }
 
 /* 页脚 */
 .footer {
   text-align: center;
   padding: 2rem;
-  background-color: #0f0f0f;
-  color: #666;
+  background-color: var(--color-backgroundNavbar);
+  color: var(--color-textLight);
   font-size: 0.9rem;
 }
 

@@ -160,7 +160,7 @@ onUnmounted(() => {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px var(--color-shadowColor);
 }
 
 .slider-container {
@@ -209,8 +209,8 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   padding: 2rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: #ffffff;
+  background: linear-gradient(to top, var(--color-modalOverlay), transparent);
+  color: var(--color-textPrimary);
   text-align: left;
 }
 
@@ -218,14 +218,14 @@ onUnmounted(() => {
   margin: 0 0 0.5rem 0;
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px var(--color-shadowColor);
 }
 
 .slide-description {
   margin: 0;
   font-size: 1rem;
   opacity: 0.9;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px var(--color-shadowColor);
 }
 
 /* 导航按钮 */
@@ -233,9 +233,9 @@ onUnmounted(() => {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #ffffff;
+  background-color: var(--color-buttonHover);
+  border: 1px solid var(--color-borderColor);
+  color: var(--color-textPrimary);
   font-size: 2rem;
   width: 50px;
   height: 50px;
@@ -250,7 +250,7 @@ onUnmounted(() => {
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-accentLight);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -277,21 +277,24 @@ onUnmounted(() => {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--color-textPrimary);
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;
+  opacity: 0.6;
 }
 
 .dot:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--color-textPrimary);
   transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .dot.active {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-textPrimary);
   transform: scale(1.3);
+  opacity: 1;
 }
 
 /* 播放/暂停按钮 */
@@ -299,9 +302,9 @@ onUnmounted(() => {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #ffffff;
+  background-color: var(--color-buttonHover);
+  border: 1px solid var(--color-borderColor);
+  color: var(--color-textPrimary);
   font-size: 1.5rem;
   width: 40px;
   height: 40px;
@@ -316,7 +319,7 @@ onUnmounted(() => {
 }
 
 .play-pause-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-accentLight);
   transform: scale(1.1);
 }
 
