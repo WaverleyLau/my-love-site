@@ -161,6 +161,7 @@ onUnmounted(() => {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 32px var(--color-shadowColor);
+  z-index: 0;
 }
 
 .slider-container {
